@@ -4,12 +4,8 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+Hi, friend! Thanks for visiting my blog. My name is Le Tien Tai. I’m a novice programmer from Viet Nam. I like solving problems, even though sometimes, my solutions make thing worse. Besides coding, I also love cooking, reading, and playing organ.
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jglovier" %} /
-[jekyll-new](https://github.com/jglovier/jekyll-new)
+Before, I have tried WordPress and Blogger, then give up. The two frameworks are complex, and, I don’t like the feeling that I cannot control everything on my site. Jekyll is a better solution. So here it is, my seriously blog. I will share here my experience, some of my thoughts and stuffs that I feel cool. Hope you find this site useful.
 
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+Any feedback or suggestion is welcome, especially about my English usage.
