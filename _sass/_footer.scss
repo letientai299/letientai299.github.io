@@ -1,0 +1,33 @@
+div.container {
+    display: block;
+    position: relative;
+}
+
+div.container > div.left {
+    float: left;
+    margin-right: 10px;
+    position: absolute;
+    bottom: 0;
+}
+
+div.container > div.right {
+    float: right;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+div.container > div.right > a {
+    vertical-align: center;
+}
+
+div.container > div.right > a > span {
+    clear: right;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+div.container > div.right > a > span > svg {
+    height: 24px;
+    width: 24px;
+    vertical-align: bottom;
+}

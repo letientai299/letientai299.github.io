@@ -1,13 +1,19 @@
 <footer class="site-footer">
-  <div class="wrapper">
-    <p class="copyright">
-    <strong>&copy; {{ site.time | date: '%Y' }} {{ site.author }}</strong><br />
-    </p>
-    {% for icon in social-icons %}
-    <a class="social-icon--link {{ icon.class }}" href="{{ icon.url }}">
-      {% include {{ icon.class | prepend: 'social-icons/' | append: '.svg' }} %}
-      <span class="social-icon--title visuallyHidden">{{ icon.title }}</span>
-    </a>
-    {% endfor %}
-  </div>
+    <div class="wrapper">
+        <div class="container" style="text-align: right">
+            <div class="left">
+                <strong>&copy; {{ site.time | date: '%Y' }} {{ site.author }}</strong>
+            </div>
+
+            <div class="right">
+                {% for icon in site.social-icons %}
+                    <a href="{{ icon.url }}">
+                        <span> {% include {{ icon.class | prepend: "icon-" | append: ".svg" }} %} </span>
+                    </a>
+                {% endfor %}
+            </div>
+
+            <div style="clear: both;"></div>
+        </div>
+    </div>
 </footer>

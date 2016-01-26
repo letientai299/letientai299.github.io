@@ -18,18 +18,13 @@ markdown: kramdown
 
 defaults:
     -
-      scope:
+    scope:
         path: ""
-      values:
-        comments: true
+    values: 
+    comments: true
+    
+}
 
-social-icons:
-    - title: GitHub
-      url: https://github.com/letientai299
-      class: github
-    - title: Twitter
-      url: https://twitter.com/letientai299
-      class: twitter
-    - title: LinkedIn
-      url: https://www.linkedin.com/in/letientai299
-      class: linkedin
+social-icons:[
+    {title: GitHub, url: "https://github.com/davidensinger", class: github}
+]
