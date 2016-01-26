@@ -49,11 +49,7 @@ $on-laptop:        600px;
 @import
 "base",
 "layout",
-"syntax-highlighting"
+"syntax-highlighting",
+"tagcloud"
 ;
 
-
-// stolen from https://github.com/jokecamp/jokecamp.com
-#tagcloud { font-size:.9em;  }
-.tags li { display:inline; padding:0 4px; background:#EEE;}
-.internal { color: #515151; }
