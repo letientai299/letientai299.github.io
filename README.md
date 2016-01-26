@@ -3,3 +3,12 @@
 Credit to resources that I have use to create this site:
 -------------------------------------------------------------
 - [How to list your jekyll posts by tags](http://www.jokecamp.com/blog/listing-jekyll-posts-by-tag/)
+
+
+
+TODO
+----
+- Add meta for search engine
+- Add social sharing button
+- Refactor the theme: colors usage, fonts, text size, hightlighting
+- Add link to social accounts
