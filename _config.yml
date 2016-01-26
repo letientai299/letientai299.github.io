@@ -6,12 +6,12 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Coding Monkey
-author: "Le Tien Tai"
+title: Tai's home
+author: "Tai Le Tien"
 description: > # this means to ignore newlines until "baseurl:"
-  Le Tien Tai's blog.
+  Tai's home page.
 baseurl: ""   # the subpath of your site, e.g. /blog
-url: "http://letientai299.github.io" # the base hostname & protocol for your site
+url: "https://letientai299.github.io" # the base hostname & protocol for your site
 
   # Build settings
 markdown: kramdown
