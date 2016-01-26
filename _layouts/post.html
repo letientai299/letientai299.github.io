@@ -11,12 +11,12 @@ layout: default
         </time>
 
         {% if page.author %}
-        <span itemprop="author" itemscope
-              itemtype="http://schema.org/Person">
-            <span itemprop="name">
-                {{ page.author }}
+            <span itemprop="author" itemscope
+                  itemtype="http://schema.org/Person">
+                <span itemprop="name">
+                    {{ page.author }}
+                </span>
             </span>
-        </span>
         {% endif %}
 
         </p>
@@ -25,6 +25,11 @@ layout: default
     <div class="post-content" itemprop="articleBody">
         {{ content }}
     </div>
-
+    <div class="tags">
+        <b>Tags</b>
+        {% for tag in page.tags %}
+            <a href='/tag/#{{tag}}'>{{tag}} </a>
+        {% endfor %}
+    </div>
 </article>
 

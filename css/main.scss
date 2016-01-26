@@ -38,9 +38,9 @@ $on-laptop:        600px;
 //     }
 // }
 @mixin media-query($device) {
-  @media screen and (max-width: $device) {
-    @content;
-  }
+    @media screen and (max-width: $device) {
+        @content;
+    }
 }
 
 
@@ -51,3 +51,9 @@ $on-laptop:        600px;
 "layout",
 "syntax-highlighting"
 ;
+
+
+// stolen from https://github.com/jokecamp/jokecamp.com
+#tagcloud { font-size:.9em;  }
+.tags li { display:inline; padding:0 4px; background:#EEE;}
+.internal { color: #515151; }

@@ -4,20 +4,29 @@ layout: default
 
 <div class="home">
 
-    <h1 class="page-heading">Posts</h1>
+    {% comment %}TODO: add featured posts someday{% endcomment %}
 
+    <h1 class="page-heading">Recent posts</h1>
+
+    {% comment %}
+    Only show a few latest port for faster loading time
+    {% endcomment %}
     <ul class="post-list">
-        {% for post in site.posts %}
-        <li>
-            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-            <h2>
-                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-            </h2>
-            {{ post.excerpt }}
-        </li>
+        {% for post in site.posts limit:10 %}
+            <li>
+                <h2>
+                    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                </h2>
+                <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+                {{ post.excerpt }}
+            </li>
         {% endfor %}
     </ul>
 
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+    <h2>
+        <a href="/archive">More...</a>
+    </h2>
+
+    <p class="rss-subscribe">Subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>
