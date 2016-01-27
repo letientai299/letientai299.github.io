@@ -4,6 +4,7 @@ title: Blog posts by tag
 permalink: /tag/
 ---
 
+
 <div class="tags">
     <ul>
         {% for tag in site.tags %}
@@ -20,7 +21,9 @@ permalink: /tag/
     </ul>
 </div>
 
-<p/>
+<p>
+
+</p> </p> <hr> <p> </p>
 
 {% for tag in site.tags %}
     {% assign t = tag | first %}
@@ -28,7 +31,7 @@ permalink: /tag/
     <h4 class="tag">
         <a name="{{t | downcase | replace:" ","-" }}"></a>
         <a href="/tag/#{{t | downcase | replace:" ","-" }}">
-            {{ t | downcase }}
+          &#x1F516; {{ t | downcase }}
         </a>
     </h4>
     <ul>
