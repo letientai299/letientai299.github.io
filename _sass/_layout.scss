@@ -1,6 +1,7 @@
 /**
  * Site header
  */
+
 .site-header {
     border-top: 5px solid $grey-color-dark;
     border-bottom: 1px solid $grey-color-light;
@@ -187,6 +188,7 @@
 .post-meta {
     font-size: $small-font-size;
     color: $grey-color;
+    text-align: right;
 }
 
 .post-link {
@@ -245,4 +247,22 @@
 li.post-item {
     display: inline-block;
     width: 100%;
+}
+
+.PageNavigation {
+    font-size: 14px;
+    display: block;
+    width: auto;
+    overflow: hidden;
+}
+
+.PageNavigation a {
+    display: block;
+    width: 50%;
+    float: left;
+    margin: 1em 0;
+}
+
+.PageNavigation .next {
+    text-align: right;
 }
