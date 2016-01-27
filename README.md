@@ -5,7 +5,7 @@ Credit
 I have learn some cool tips and ideas about Jekyll/Liquid by reading those
 posts
 - [How to list your jekyll posts by tags](http://www.jokecamp.com/blog/listing-jekyll-posts-by-tag/)
-- (How to Dynamically include SVGs inline with Jekyll)[http://davidensinger.com/2014/11/how-to-dynamically-include-svgs-inline-with-jekyll/]
+- [How to Dynamically include SVGs inline with Jekyll](http://davidensinger.com/2014/11/how-to-dynamically-include-svgs-inline-with-jekyll/)
 
 
 
