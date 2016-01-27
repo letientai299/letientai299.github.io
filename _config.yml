@@ -12,7 +12,9 @@ description: > # this means to ignore newlines until "baseurl:"
     Tai's blog.
 baseurl: ""   # the subpath of your site, e.g. /blog
 url: "https://letientai299.github.io" # the base hostname & protocol for your site
+
 num-recent-post: 10
+num-words-post-title-truncate: 4
 
 gems:
     - jekyll-last-modified-at

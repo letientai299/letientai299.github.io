@@ -16,10 +16,10 @@
     height: 30px;
     line-height: 30px;
     padding: 0 1em;
-    background-color: #3498db;
+    background-color: $brand-color;
     border-radius: 0 3px 3px 0;
-    color: #fff;
-    font-size: 13px;
+    color: white;
+    font-size: $base-font-size;
     text-decoration: none;
     -webkit-transition: .2s;
     transition: .2s;
@@ -32,7 +32,7 @@
     content: '';
     width: 0;
     height: 0;
-    border-color: transparent #3498db transparent transparent;
+    border-color: transparent $brand-color transparent transparent;
     border-style: solid;
     border-width: 15px 15px 15px 0;
     -webkit-transition: .2s;
@@ -53,7 +53,7 @@
     width: 6px;
     height: 6px;
     margin-top: -3px;
-    background-color: #fff;
+    background-color: white;
     border-radius: 100%;
 }
 
@@ -66,10 +66,10 @@
 }
 
 .tags ul li a:hover {
-    background-color: #555;
-    color: #fff;
+    background-color: $grey-color-dark;
+    color: white;
 }
 
 .tags ul li a:hover::before {
-    border-right-color: #555;
+    border-right-color: $grey-color-dark;
 }

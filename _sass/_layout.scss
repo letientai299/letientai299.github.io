@@ -247,22 +247,45 @@
 li.post-item {
     display: inline-block;
     width: 100%;
-}
+  }
 
-.PageNavigation {
-    font-size: 14px;
-    display: block;
+/**
+ * For previous and next post link
+ */
+.post-navigation {
+    float:none;
     width: auto;
+    white-space: normal;
     overflow: hidden;
-}
-
-.PageNavigation a {
+    line-height: $base-line-height;
     display: block;
-    width: 50%;
-    float: left;
-    margin: 1em 0;
-}
 
-.PageNavigation .next {
-    text-align: right;
+    a {
+        color: $text-color;
+        display: inline-block;
+        width: 40%;
+        float: left;
+        margin: auto;
+        height: 30px;
+        line-height: 30px;
+        padding: 0 1em;
+        border: 1px solid $grey-color-light;
+        border-radius: 3px;
+        text-decoration: none;
+    }
+
+    a:hover {
+        background-color:   $grey-color-dark;
+        color: white;
+    }
+
+    a:hover::before {
+        border-right-color: white;
+    }
+
+    .next {
+        clear: right;
+        float: right;
+        text-align: right;
+    }
 }
