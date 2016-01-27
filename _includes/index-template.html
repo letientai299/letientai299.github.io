@@ -5,8 +5,9 @@
     {% comment %}
     Only show a few latest port for faster loading time
     {% endcomment %}
+
     <ul class="post-list">
-        {% for post in include.postList limit:10 %}
+        {% for post in include.postList limit: site.num-recent-post %}
             <li>
                 <h2>
                     <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
@@ -18,9 +19,7 @@
     </ul>
 
     <h2>
-        <a href="/archive">More...</a>
+        <a href="/archive">View archived posts...</a>
     </h2>
-
-    <p class="rss-subscribe">Subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>
