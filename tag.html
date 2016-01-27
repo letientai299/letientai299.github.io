@@ -34,7 +34,7 @@ permalink: /tag/
     <ul>
         {% for post in posts %}
             {% if post.tags contains t %}
-                <li style="float:none;">
+                <li class="post-item">
                     <a style="float:left;"href="{{ post.url }}">{{ post.title }}</a>
                     <span class="post-meta" style="float:right;">{{ post.date | date: "%b %-d, %Y"  }}</span>
                 </li>
