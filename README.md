@@ -15,11 +15,11 @@ TODO
 - [ ] Add meta for search engine.
 - [ ] Add search functions: search using tags, using categories, by keywords.
 - [ ] Add social sharing buttons.
-- [ ] Refactor the theme: colors usage, fonts, text size, hightlighting.
 - [x] Add link to social accounts.
 - [ ] Try to create a better theme.
-- [ ] Manage multiple languages post.
+- [x] Manage multiple languages post.
 - [ ] Take notes about how to create this site
+- [ ] Write post! Damn it. Too lazy.
 - [ ] ...
 
 
