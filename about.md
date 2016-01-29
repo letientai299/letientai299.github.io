@@ -2,12 +2,37 @@
 layout: page
 title: About
 permalink: /about/
+comments: false
 ---
+
+About me
+--------
 
 Hi, friend!
 
-Thanks for visiting my blog. My name is Le Tien Tai. I’m a novice programmer from Viet Nam. I like solving problems, even though sometimes, my solutions make thing worse. Besides coding, I also love cooking, reading, and playing organ.
+Thanks for visiting my blog. My name is Le Tien Tai (in English, I think it
+would be Tai Le Tien, for you not to be confused).
 
-Before, I have tried WordPress and Blogger, then give up. The two frameworks are complex, and, I don’t like the feeling that I cannot control everything on my site. Jekyll is a better solution. So here it is, my seriously blog. I will share here my experience, some of my thoughts and stuffs that I feel cool. Hope you find this site useful.
+I'm a Java developer. Sometimes, I also work with C++.
 
-Any feedback or suggestion is welcome, especially about my English usage.
+I love problems solving, and programming is a kind of that such thing. Besides
+that, I also love cooking, reading, and playing music.
+
+Currently, I'm learning the Unix utilities: bash, zsh, vim, ssh,... Vim's
+actually my main editor on all operating system (well, I even try to use
+Vim-like keybinding as much as posible for my daily work).
+
+About this site
+---------------
+
+On this site, I share my thoughts and experience. Knowledge should be sharing.
+Let's share to be share...
+
+Ok, skip the nonsense. The first purpose of this site is make myself a public
+identification. The second purpose is for taking notes. I find myself not have
+a good memory, so I need somewhere to put my thoughts down.
+
+As this time, my grammar is bad. My words may be lenghty. If you find it's hard
+too read, I'm sorry. Any feedback or suggestion is welcome. You can contact me at
+[letientai299@gmail.com](mailto:letientai299@gmail.com)
+
