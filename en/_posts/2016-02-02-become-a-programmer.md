@@ -4,21 +4,22 @@ title: "Become a programmer"
 date: "2016-02-02 01:22"
 ---
 
-This is my first post ever in this site. This do not aim to all kind of the
+_This is my first post ever in this site. This do not aim to all kind of the
 reader, at best, this aim to the Information Technology student, who will
 become a programmer someday. So if you are already an experienced one, or you
 find it not useful, just skip it :). But, you're always welcome to give me
 feedback to improve this post, or share with us your experience by leaving a
-comment.
+comment._
+
+**Table of contents**
+
+* TOC
+{:toc}
 
 OK, so you are an fresher who've just finished your study in college, or even
 better, you are an high school student, want to write code in a professional
 manner some day. Following tips may help you:
 
-* [Practice touch typing](#practice-touch-typing)
-* [Learn to manage things](#learn-to-manage-things)
-* [Understand your tools](#understand-your-tools)
-* [Mastering thing one by one](#mastering-thing-one-by-one)
 
 Practice touch typing
 ---------------------
