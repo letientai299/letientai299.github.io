@@ -1,0 +1,8 @@
+#!/bin/sh
+# Update the modified_at property of post when perform the commmit
+
+git diff --cached --name-status | grep "^M" | while read a b; do
+  cat $b | sed "/---.*/,/---.*/s/^modified_at:.*$/modified_at: \"$(date "+%Y %b %d")\"/" > tmp
+  mv tmp $b
+  git add $b
+done
