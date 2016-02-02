@@ -7,10 +7,10 @@ layout: default
         <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
         <div class="post-meta">
             <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-                Post in {{ page.date | date: "%d %b %Y" }}.
+                Post in {{ page.date | date: "%Y %d %b" }}.
             </time>
 
-            Last modified at {{ page.last_modified_at | date:"%d %b %Y" }}
+            Last modified at {{ page.modified_at }}
 
             {% if page.author %}
                 <span itemprop="author" itemscope
