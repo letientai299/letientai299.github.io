@@ -16,9 +16,6 @@ url: "https://letientai299.github.io" # the base hostname & protocol for your si
 num-recent-post: 10
 num-words-post-title-truncate: 4
 
-gems:
-    - jekyll-last-modified-at
-
       # Build settings
 markdown: kramdown
 
