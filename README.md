@@ -20,6 +20,7 @@ TODO
 - [x] Manage multiple languages post.
 - [ ] Take notes about how to create this site
 - [ ] Write post! Damn it. Too lazy.
+- [ ] Create left side bar for grouping posts
 - [ ] ...
 
 
