@@ -18,6 +18,7 @@ num-words-post-title-truncate: 4
 
 gems:
     - jekyll-last-modified-at
+    - jemoji
 
       # Build settings
 markdown: kramdown
