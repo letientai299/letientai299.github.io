@@ -51,8 +51,63 @@ Second](http://blog.codinghorror.com/we-are-typists-first-programmers-second/)
 Learn to manage things
 ----------------------
 
+Think about this: the source code is like a house; and each file is like a room
+that have its special feature; in each room you have lots of thing you need to
+remember (functions, variables, constants...) which each one have its own
+special feature contribute to the room feature. You need to understand the
+house well in order to quickly identify the root cause of bug, or at least know
+where to start debugging (in such giant house that have thousands of room and
+have been build for years). With new feature, you will have to build up new
+room, how could you done that without broken existed room, if you don't know
+the house's structure. That's why you need to manage your source code well.
+
+The example is about source code. But I don't literally mean only source code.
+I mean everything: time, file, data, requirement, money, health... Yes, you
+have to learn how to manage everything in your life. Your time should be used
+wisely, so that you can complete your job while keep your personal life
+balance.  Your tasks should be prioritize and adapt to your customer
+requirements. Your source code need to have a strictly coding convention, so
+that all of your team member could understand others code (and fix it as well).
+Your file should also follow a naming convention, so that you could file
+exactly what you need without searching in your directory.
+
+Managing things is hard. Of cource. There a lot of thing to care about. But
+trust me, it's only hard is the beginning. Make it a habit. And when you feel
+comfortable with it, you will naturally do it right, without mentally effort.
+If you don't do it in your young years, then later, you end up messing your
+life.
+
+This is a big topic, I don't want to make this post become a book in length.
+There're a lot of great posts and article discuss about this topic already,
+just try search for it.
 
 
+About the techniques or best practice to chooses, I recommend you give a read
+for following link:
+
+### Naming convention
+
+- [Best practices for file naming](https://library.stanford.edu/research/data-management-services/data-best-practices/best-practices-file-naming)
+- [Naming conventions for files and folders](https://charuzu.wordpress.com/2011/09/06/file-folder-naming-conventions)
+
+### Semantic versioning
+- [Semantic Versioning 2.0.0 spec](http://semver.org/): This will help you
+    get insight about what these version numbers of the libraries you are using
+    mean.
+
+### Time
+
+- [Productivity 101: A Primer to The Pomodoro Technique](http://lifehacker.com/productivity-101-a-primer-to-the-pomodoro-technique-1598992730): Introduce to the pomodoro time management method
+
+### Others
+
+- [On Commit messages](http://who-t.blogspot.in/2009/12/on-commit-messages.html): Guide to write a good commit message.  You don't know what is a _commit_?  Learn [Git](https://git-scm.com/doc) now.
+    Learn about [Github](https://github.com) also. The sooner you start to use Github (and
+ join the open source community), the faster you improve your development
+ skill.
+
+- [Google style guide](https://github.com/google/styleguide) for some
+  programming languages.
 
 Understand your tools.
 --------------------------------------
@@ -136,3 +191,5 @@ Good luck!
 [^vim_beginner]: Honestly, I'm still a beginner in Vim. Too many things to learn in that little 10 MB software, but it's never get boring.
 
 [^my_speed]: For your information, my speed is about 50 WPM when typing normal English (around 70 WPM for Vietnamese, using VNI input method). But when programming, it's really different, because sometime your IDE can generate boilerplate code for you, sometime, you have to write it all, from scratch. So, don't bother with such question like: How fast can a programmer type? You don't really need to beat world typing record. Just as fast as type without need to look in the keyboard.
+
+You don't know what is a _commit_? Learn [Git](https://git-scm.com/doc) now. Learn about [Github](https://github.com) also. The sooner you start to use Github (and join the open source community), the faster you improve your development skill.
