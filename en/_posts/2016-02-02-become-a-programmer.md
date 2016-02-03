@@ -192,4 +192,3 @@ Good luck!
 
 [^my_speed]: For your information, my speed is about 50 WPM when typing normal English (around 70 WPM for Vietnamese, using VNI input method). But when programming, it's really different, because sometime your IDE can generate boilerplate code for you, sometime, you have to write it all, from scratch. So, don't bother with such question like: How fast can a programmer type? You don't really need to beat world typing record. Just as fast as type without need to look in the keyboard.
 
-You don't know what is a _commit_? Learn [Git](https://git-scm.com/doc) now. Learn about [Github](https://github.com) also. The sooner you start to use Github (and join the open source community), the faster you improve your development skill.
