@@ -263,7 +263,7 @@ Good luck!
 
 [^website_vs_webapp]: Web site vs web app? See [this answer](http://stackoverflow.com/a/8694944/3869533) on Stackoverflow.
 
-[^ux]: UX is stand for User Experience. What is UX different with UI? My short and dump answer: UI is the expression: That's what user see on their screen, the layout, the color, the font family.... UX is the interaction. How the users use our app? How they feel? Is our app easier to use, is it matche what their need. Want a longer answer, see [this post](https://medium.com/swlh/what-is-ux-design-6f1b04e22ec0#.g14jeg5wl) (from a more experience writer, not mine :smile:).
+[^ux]: UX is stand for User Experience. What is UX different with UI? My short and dump answer: UI is the expression: That's what user see on their screen, the layout, the color, the font family.... UX is the interaction. How the users use our app? How they feel? Is our app easier to use, is it matche what their need. Want a longer answer, see [this post](https://medium.com/swlh/what-is-ux-design-6f1b04e22ec0#.g14jeg5wl) (from a more experience writer, not mine).
 
 
 [^vietnamese]: I'm not sure about other countries, with different educations.  So I speak for a normal Vietnamese student like me.
