@@ -1,4 +1,5 @@
 # letientai299.github.io
+[![Build Status](https://travis-ci.org/letientai299/letientai299.github.io.svg?branch=master)](https://travis-ci.org/letientai299/letientai299.github.io)
 
 Credit
 ------
