@@ -16,17 +16,17 @@ div.container > div.right {
     margin-bottom: 0px;
 }
 
-div.container > div.right > a {
+div.container > div.right > span {
     vertical-align: center;
 }
 
-div.container > div.right > a > span {
+div.container > div.right > span > a{
     clear: right;
     display: inline-block;
     margin-left: 10px;
 }
 
-div.container > div.right > a > span > svg {
+div.container > div.right > span > a > svg {
     height: 24px;
     width: 24px;
     vertical-align: bottom;

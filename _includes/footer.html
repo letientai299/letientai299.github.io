@@ -7,9 +7,11 @@
 
             <div class="right">
                 {% for icon in site.social-icons %}
-                    <a href="{{ icon.url }}">
-                        <span> {% include {{ icon.class | prepend: "icon-" | append: ".svg" }} %} </span>
-                    </a>
+                    <span>
+                        <a href="{{ icon.url }}">
+                            {% include {{ icon.class | prepend: "icon-" | append: ".svg" }} %}
+                        </a>
+                    </span>
                 {% endfor %}
             </div>
 
