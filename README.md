@@ -24,3 +24,11 @@ TODO
 - [ ] ...
 
 
+Posts ideas
+-----------
+
+- [ ] Tutorial about create atom custom command.
+- [ ] X macros trick.
+- [ ] How to change apache2 homa page?
+- [ ] Use ProxyPass to redirect apache2 page to other web app in Ubuntu server.
+- [ ] Share common settings between android gradle modules.
