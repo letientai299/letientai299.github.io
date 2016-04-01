@@ -9,7 +9,6 @@ posts
 - [How to Dynamically include SVGs inline with Jekyll](http://davidensinger.com/2014/11/how-to-dynamically-include-svgs-inline-with-jekyll/)
 
 
-
 TODO
 ----
 
