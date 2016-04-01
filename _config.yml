@@ -16,6 +16,8 @@ url: "http://letientai299.github.io"
 num-recent-post: 10
 num-words-post-title-truncate: 4
 
+future: true
+
 # Build settings
 markdown: kramdown
 
