@@ -10,8 +10,8 @@ title: Tai LT
 author: "Tai Le Tien"
 description: > # this means to ignore newlines until "baseurl:"
     Tai's blog.
-baseurl: ""   # the subpath of your site, e.g. /blog
-url: "http://letientai299.github.io" # the base hostname & protocol for your site
+baseurl: ""
+url: "http://letientai299.github.io"
 
 num-recent-post: 10
 num-words-post-title-truncate: 4
