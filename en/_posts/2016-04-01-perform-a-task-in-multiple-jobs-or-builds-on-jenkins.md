@@ -2,7 +2,7 @@
 layout: "post"
 title: "Perform a task in multiple jobs or builds on Jenkins"
 date: "2016-04-01 16:13"
-modified_at:
+modified_at: "2016 Apr 01"
 tags: jenkins tip
 ---
 
