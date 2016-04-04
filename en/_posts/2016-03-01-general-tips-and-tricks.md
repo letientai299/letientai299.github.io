@@ -2,7 +2,7 @@
 layout: "post"
 title: "General Tips and Tricks"
 date: "2016-03-01 23:27"
-modified_at: "2016 Apr 01"
+modified_at: "2016 Apr 05"
 tags: tip
 ---
 
@@ -39,3 +39,19 @@ posts from future. You can fix it by adding `future: true` into your
 
 More detail about the option here: [Jekyll Configuration](https://jekyllrb.com/docs/configuration/)
 
+
+Regex performance tips
+----------------------
+
+Related to this [problem](https://www.hackerrank.com/challenges/find-substring) on hackerrank. To match a subword:
+
+```java
+// This works,  but so slow. To many things to check.
+Pattern compile = Pattern.compile("(?<=\\w+)" + st + "(?=\\w+)");
+
+// This fast, but not correct.
+Pattern compile = Pattern.compile("(?<![\\W])" + st + "(?![\\W])");
+
+// This is the correct answer
+Pattern compile = Pattern.compile("(?<=[^\\W])" + st + "(?=[^\\W])");
+```
