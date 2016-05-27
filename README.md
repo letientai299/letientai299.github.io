@@ -29,6 +29,9 @@ Posts ideas
 
 - [ ] Tutorial about create atom custom command.
 - [ ] X macros trick.
-- [ ] How to change apache2 homa page?
-- [ ] Use ProxyPass to redirect apache2 page to other web app in Ubuntu server.
+- [ ] How to change Apache2 home page?
+- [ ] Use ProxyPass to redirect Apache2 page to other web app in Ubuntu server.
 - [ ] Share common settings between android gradle modules.
+- [ ] Setup Jenkins to deploy after build success.
+- [ ] Customize your maven site: site.css, add code highlight, change skin...
+- [ ] Using scala to check for java code.
