@@ -2,7 +2,7 @@
 layout: "post"
 title: "A better verification code SMS message"
 date: "2016-06-19 12:42"
-modified_at:
+modified_at: "2016 Jun 19"
 tags: ux
 ---
 
@@ -53,4 +53,4 @@ Well, I'm not native English speaker. I just want to make clear the concept:
 - Important thing go first.
 - Keep it short and simple.
 
-**Disclaimer**: I'm not an UX expert, just a very lazy programmer.
+**Disclaimer**: I'm not an UX expert. I'm just very lazy.
