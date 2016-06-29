@@ -1,4 +1,0 @@
-language: ruby
-rmv:
-    - 2.1.5p273
-script: "bundle exec jekyll build"

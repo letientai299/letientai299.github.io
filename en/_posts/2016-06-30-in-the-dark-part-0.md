@@ -1,8 +1,8 @@
 ---
 layout: "post"
 title: "Living in the dark - Part 0"
-date: "2016-05-30 12:20"
-modified_at: ""
+date: "2016-06-30 12:20"
+modified_at: "2016 Jun 30"
 tags: terminal tip
 ---
 
@@ -88,9 +88,10 @@ Here are some criteria for my final decision:
 
 - Ranger
 
-### Mail client
+### Mail client and feed reader
 
-- Mutt
+- Mutt (tmux notification)
+
 
 ### Todo manager
 
