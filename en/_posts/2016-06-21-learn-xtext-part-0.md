@@ -2,12 +2,19 @@
 layout: "post"
 title: "Learn XText - Part 0 - Goals"
 date: "2016-06-21 20:46"
-modified_at: "2016 Jun 21"
+modified_at: "2017 Jan 04"
 tags: xtext learning
 ---
 
 _The goals of mine when I start learning [XText](https://www.eclipse.org/xtext) for
 my next tooling project_
+
+**Update - 2017 Jan 1st** As development on mentioned project stop, I move on,
+and no longer work on Xtext. The reason: after first working prototype, customer
+say that they need some time to evaluate it. Then they took the code, and never
+come back. It's fine. I just feel sad that once again, I don't have chance to
+learn in depth in a technology. After all, Xtext is nice to know.
+
 
 > Note: This post is the first of a series, and this is still a work in progress.
 
