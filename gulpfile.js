@@ -8,7 +8,7 @@ var cp = require('child_process');
 var jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 
 var messages = {
-  jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
+  jekyllBuild: 'Refreshing'
 };
 
 /**
@@ -16,7 +16,7 @@ var messages = {
  */
 gulp.task('jekyll-build', function(done) {
   browserSync.notify(messages.jekyllBuild);
-  return cp.spawn(jekyll, ['build'], {
+  return cp.spawn(jekyll, ['build', 'limit_posts'], {
       stdio: 'inherit'
     })
     .on('close', done);
