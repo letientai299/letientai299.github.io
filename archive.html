@@ -4,22 +4,23 @@ title: Post archive
 permalink: /archive/
 ---
 
-<ul>
-    {% for post in site.posts %}
-        {% unless post.next %}
-            <h2>{{ post.date | date: '%Y' }}</h2>
-        {% else %}
-            {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-            {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
-            {% if year != nyear %}
-                <h3>{{ post.date | date: '%Y' }}</h3>
-            {% endif %}
-        {% endunless %}
+{% for post in site.posts %}
+  {% unless post.next %}
+    <h2>{{ post.date | date: '%Y' }}</h2>
+    <ul>
+  {% else %}
+    {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+    {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
+    {% if year != nyear %}
+      </ul>
+      <h2>{{ post.date | date: '%Y' }}</h2>
+      <ul>
+    {% endif %}
+  {% endunless %}
 
-        <li class="post-item">
-            <a style="float:left;"href="{{ post.url }}">{{ post.title }}</a>
-            <span class="post-meta" style="float:right;">{{ post.date | date: "%B %-d, %Y"  }}</span>
-        </li>
-    {% endfor %}
+  <li class="post-item">
+    <a style="float:left;"href="{{ post.url }}">{{ post.title }}</a>
+    <span class="post-meta" style="float:right;">{{ post.date | date: "%B %-d, %Y"  }}</span>
+  </li>
+{% endfor %}
 </ul>
-
