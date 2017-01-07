@@ -8,8 +8,8 @@ tags: xtext learning
 
 _The goals of mine when I start learning
 [XText](https://www.eclipse.org/xtext) for my next tooling project.
-See the follow up post [here][update_on_xtext] for more detail about what I've
-learnt during working on that project._
+See the follow up post [Update on learning Xtext][update_on_xtext]
+for more detail about what I've learnt during working on that project._
 
 Update
 ------
@@ -24,7 +24,12 @@ know.
 ----------------------------------------------------------------------
 <br>
 
-> Note: This post is the first of a series, and this is still a work in progress.
+
+**Table of contents**
+
+* TOC
+{:toc}
+
 
 Why learning Xtext?
 -------------------
