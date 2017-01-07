@@ -6,8 +6,10 @@ modified_at: "2017 Jan 07"
 tags: xtext learning
 ---
 
-_**Deprecated** (see Update). The goals of mine when I start learning
-[XText](https://www.eclipse.org/xtext) for my next tooling project_
+_The goals of mine when I start learning
+[XText](https://www.eclipse.org/xtext) for my next tooling project.
+See the follow up post [here][update_on_xtext] for more detail about what I've
+learnt during working on that project._
 
 Update
 ------
@@ -18,24 +20,6 @@ they need some time to evaluate it. Then they took the code, and never
 come back. It's fine. I just feel sad that once again, I don't have
 chance to learn in depth in a technology. After all, Xtext is nice to
 know.
-
-Things I'd done within 4 months for that project:
-
-- Read and do exercise 60% of the book
- [Implementing Domain-Specific Languages with Xtext and Xtend](https://www.packtpub.com/application-development/implementing-domain-specific-languages-xtext-and-xtend)
-- Learn and use [Xtend](https://eclipse.org/xtend/) in production. It's a
-  nice JVM functional language, but I would prefer Scala over it.
-
-- Learn Scala, read 32/35 chapters in the book [Programming in Scala, 2nd
-  Edition](http://booksites.artima.com/programming_in_scala_2ed). Honestly,
-  I can't remember everything I learnt in that book. But, the way the authors
-  teaching the language design, practice, and programming princicles is
-  enlightened. That's a much read.
-
-- Learn about Property-based testing and use
-  [ScalaCheck](https://www.scalacheck.org/) for test the core library of my
-  project. Actually, I was first read about Property-based testing, then
-  ScalaCheck, and finally decided to give Scala a try.
 
 ----------------------------------------------------------------------
 <br>
@@ -102,3 +86,7 @@ I could accomplish the following goals.
 
 I will update this post or write follow up post to share my experience in this
 adventure.
+
+
+
+[update_on_xtext]: {% post_url 2017-01-07-Update-on-learning-XText %}
