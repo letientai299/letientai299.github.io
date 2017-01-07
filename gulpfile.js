@@ -1,13 +1,12 @@
-// Based on
-// https://github.com/shakyShane/jekyll-gulp-sass-browser-sync/blob/master/gulpfile.js
-var gulp = require('gulp');
-var browserSync = require('browser-sync');
-var cp = require('child_process');
+const gulp = require('gulp');
+const browserSync = require('browser-sync');
+const cp = require('child_process');
+const imagemin = require('gulp-imagemin');
 
 // TODO Do we really need to support window?
-var jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
+const jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 
-var messages = {
+const messages = {
   jekyllBuild: 'Refreshing'
 };
 
@@ -61,3 +60,11 @@ gulp.task('watch', function() {
  * compile the jekyll site, launch BrowserSync & watch files.
  */
 gulp.task('default', ['browser-sync', 'watch']);
+
+
+
+gulp.task('min', function() {
+  gulp.src('./images_src/**/*')
+    .pipe(imagemin())
+    .pipe(gulp.dest('images'))
+});
