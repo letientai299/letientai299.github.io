@@ -40,3 +40,6 @@ compress_html:
   endings: all
   blanklines: false
   startings: [html, head, body]
+
+gems:
+  - jekyll-seo-tag
