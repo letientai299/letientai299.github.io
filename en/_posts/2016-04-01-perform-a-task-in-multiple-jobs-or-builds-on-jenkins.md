@@ -2,7 +2,7 @@
 layout: "post"
 title: "Perform a task in multiple jobs or builds on Jenkins"
 date: "2016-04-01 16:13"
-modified_at: "2016 Jun 19"
+modified_at: "2017 Jan 07"
 tags: jenkins tip
 ---
 
@@ -20,14 +20,15 @@ it quickly._
 
 * Now, insert the following code snippet. It's is [Groovy](http://www.groovy-lang.org/) script.
 
-{% highlight groovy %}
+
+```groovy
 Jenkins.instance.getItemByFullName("JobName")
-  .builds.findAll { // Notice that this is a curly bracket
-    it.number > 0   // Provide your filter conditions.
-  }.each{
-    println it      // Use it.delete() if you want to clean up your build history.
-  }
-{% endhighlight %}
+.builds.findAll { // Notice that this is a curly bracket
+  it.number > 0   // Provide your filter conditions.
+}.each{
+  println it      // Use it.delete() if you want to clean up your build history.
+}
+```
 
 * Now press `Ctrl-Enter` to execute the script. Jenkins will print the list of
   current builds for the queries job name. For example:

@@ -10,7 +10,6 @@ num-words-post-title-truncate: 4
 
 future: true
 
-# Build settings
 markdown: kramdown
 
 defaults:
