@@ -2,7 +2,7 @@
 layout: "post"
 title: "Perform a task in multiple jobs or builds on Jenkins"
 date: "2016-04-01 16:13"
-modified_at: "2017 Jan 07"
+modified_at: "2017 Jan 08"
 tags: jenkins tip
 ---
 
@@ -15,7 +15,7 @@ it quickly._
   (alternative, in the browser address, just type `<server-url>/script`). The UI
   will look some how similar like this[^jenkins_theme]:
 
-  ![Jenkins Script Console image](/images/2016-04-01/jenkins-script-console.png)
+  ![Jenkins Script Console image](/images/2016-04-01/jenkins-script-console.jpg)
 
 
 * Now, insert the following code snippet. It's is [Groovy](http://www.groovy-lang.org/) script.
@@ -32,7 +32,7 @@ Jenkins.instance.getItemByFullName("JobName")
 
 * Now press `Ctrl-Enter` to execute the script. Jenkins will print the list of
   current builds for the queries job name. For example:
-  ![Scripts run result image](/images/2016-04-01/script-result.png)
+  ![Scripts run result image](/images/2016-04-01/script-result.jpg)
 
 
 * Modify the script to suit your need. But careful! Jenknin won't ask you
