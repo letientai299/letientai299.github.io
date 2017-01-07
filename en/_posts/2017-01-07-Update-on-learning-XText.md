@@ -3,7 +3,7 @@ layout: "post"
 title: "Update on learning XText"
 date: "2017-01-07 12:50:16"
 modified_at: "2017 Jan 07"
-tags:
+tags: note
 ---
 
 
