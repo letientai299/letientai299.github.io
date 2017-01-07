@@ -1,26 +1,13 @@
 div.container {
-    display: block;
-    position: relative;
-}
-
-div.container > div.left {
-    float: left;
-    margin-right: 10px;
-    position: absolute;
-    bottom: 0;
-}
-
-div.container > div.right {
-    float: right;
-    text-align: center;
-    margin-bottom: 0px;
+    display: flex;
+    justify-content: space-between;
 }
 
 div.container > div.right > span {
     vertical-align: center;
 }
 
-div.container > div.right > span > a{
+div.container > div.right > span > a {
     clear: right;
     display: inline-block;
     margin-left: 10px;

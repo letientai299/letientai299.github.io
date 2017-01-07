@@ -45,6 +45,7 @@ compress_html:
 # SEO
 gems:
   - jekyll-seo-tag
+  - jemoji
 
 twitter:
   username: letientai299
