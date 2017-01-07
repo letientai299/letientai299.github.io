@@ -2,13 +2,13 @@
 layout: "post"
 title: "Update on learning XText"
 date: "2017-01-07 12:50:16"
-modified_at: "2017 Jan 07"
+modified_at: "2017 Jan 08"
 tags: note
 ---
 
 
 _Things I have learnt when working on a XText project.
-Follow up post for [Learning XText - part 0]({% post_url 2016-06-21-learn-xtext-part-0 %})_
+Follow up post for [Learning XText - part 0]({% post_url en/2016-06-21-learn-xtext-part-0 %})_
 
 Within 3 months, I:
 

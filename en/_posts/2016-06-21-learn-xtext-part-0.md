@@ -2,7 +2,7 @@
 layout: "post"
 title: "Learn XText - Part 0 - Goals"
 date: "2016-06-21 20:46"
-modified_at: "2017 Jan 07"
+modified_at: "2017 Jan 08"
 tags: xtext learning
 ---
 
@@ -94,4 +94,4 @@ adventure.
 
 
 
-[update_on_xtext]: {% post_url 2017-01-07-Update-on-learning-XText %}
+[update_on_xtext]: {% post_url en/2017-01-07-Update-on-learning-XText %}
