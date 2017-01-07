@@ -86,7 +86,7 @@ a {
         color: darken($brand-color, 15%);
     }
 
-    &:hover {
+    &:focus, &:active, &:hover {
         color: $text-color;
         background: lighten($brand-color, 40%);
         box-shadow: 0px 4px 5px $grey-color;
