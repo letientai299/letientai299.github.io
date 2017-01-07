@@ -1,0 +1,26 @@
+{
+  "name": "letientai299.github.io",
+  "version": "0.0.0",
+  "description": "Setup for Jekyll blog with BrowserSync",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "author": "Tai Le Tien",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^1.3.7",
+    "gulp": "^3.8.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/letientai299/letientai299.github.io"
+  },
+  "keywords": [
+    "jekyll",
+    "gulp",
+    "sass",
+    "browsersync"
+  ],
+  "homepage": "https://github.com/letientai299/letientai299.github.io"
+}
