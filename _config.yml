@@ -1,7 +1,6 @@
 title: Tai LT
 author: "Tai Le Tien"
-description: > # this means to ignore newlines until "baseurl:"
-    Tai's blog.
+description: "Coding monkey"
 baseurl: ""
 url: "http://letientai299.github.io"
 
@@ -13,25 +12,24 @@ future: true
 markdown: kramdown
 
 defaults:
-    -
-      scope:
-        path: ""
-      values:
-        comments: false
+  scope:
+    path: ""
+    values:
+      comments: false
 
 social-icons:
-    - title: GitHub
-      url: https://github.com/letientai299
-      class: github
-    - title: HackerRank
-      url: https://hackerrank.com/letientai299
-      class: hackerrank
-    - title: Twitter
-      url: https://twitter.com/letientai299
-      class: twitter
-    - title: LinkedIn
-      url: https://www.linkedin.com/in/letientai299
-      class: linkedin
+  - title: GitHub
+    url: https://github.com/letientai299
+    class: github
+  - title: HackerRank
+    url: https://hackerrank.com/letientai299
+    class: hackerrank
+  - title: Twitter
+    url: https://twitter.com/letientai299
+    class: twitter
+  - title: LinkedIn
+    url: https://www.linkedin.com/in/letientai299
+    class: linkedin
 
 sass:
   style: compressed
