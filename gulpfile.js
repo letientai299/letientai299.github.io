@@ -49,6 +49,7 @@ gulp.task('watch', function() {
     '_config.yml',
     '*.html',
     '*.md',
+    'pages/*',
     '_sass/*.scss',
     '_layouts/*.*',
     '_includes/*.*',
