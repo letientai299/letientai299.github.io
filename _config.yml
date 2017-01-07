@@ -41,3 +41,6 @@ social-icons:
     - title: LinkedIn
       url: https://www.linkedin.com/in/letientai299
       class: linkedin
+
+sass:
+  style: compressed
