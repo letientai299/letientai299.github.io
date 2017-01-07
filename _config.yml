@@ -44,7 +44,6 @@ compress_html:
 
 # SEO
 gems:
-  - jekyll-offline
   - jekyll-seo-tag
   - jekyll-sitemap
 
