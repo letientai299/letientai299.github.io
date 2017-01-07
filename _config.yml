@@ -45,6 +45,7 @@ compress_html:
 # SEO
 gems:
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 twitter:
   username: letientai299
