@@ -3,6 +3,10 @@
   document.addEventListener("DOMContentLoaded", function(event) {
     let noJsBanner = document.getElementById("no-js-banner");
     if(noJsBanner != null) noJsBanner.remove();
+    let keyboardButton = document.getElementById("keyboard-icon");
+    let titleForNoJs = keyboardButton.getAttribute("title");
+    let titleForHasJs = titleForNoJs.replace(/\s*\(.*\)\s*/, "");
+    keyboardButton.setAttribute("title", titleForHasJs);
   });
 </script>
 

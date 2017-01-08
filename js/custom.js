@@ -35,12 +35,7 @@ Let's build great apps together!`
     return;
   }
 
-  let keyboardButton =  document.createElement('a');
-  keyboardButton.className = "page-link";
-  keyboardButton.title = "Show shortcut keys. Try pressing Shift+/ (this requires Javascript)";
-  keyboardButton.innerHTML = '&#9000;';
-  let navBar = document.querySelector("nav.site-nav > div.trigger");
-  navBar.append(keyboardButton);
+  let keyboardButton =  document.getElementById("keyboard-icon");
 
   /*
    * Store the HTML table that will be displayed when user press '?'
@@ -51,7 +46,9 @@ Let's build great apps together!`
    * Create a closure to add new keyboard shortcuts later.
    */
   let addShortcut = function(s) {
-    htmlTable+=`<tr><th style="text-align:right"><code>${s.key}</code></th><th>${s.description}</th></tr>`;
+    /* Emphasize the mnemonic */
+    let desc = s.description.replace(/&(\w)/,"<b>$1</b>");
+    htmlTable+=`<tr><th style="text-align:right"><code>${s.key}</code></th><th>${desc}</th></tr>`;
     Mousetrap.bind(s.key, s.handler);
   }
 
@@ -72,6 +69,11 @@ Let's build great apps together!`
     }
   }
 
+  let clickIfExisted = function(selector) {
+    let element = document.querySelector(selector)
+    if(element != null) element.click();
+  }
+
   /*
    * Define the keyboard mapping and descriptions.
    */
@@ -82,31 +84,38 @@ Let's build great apps together!`
       handler: showShortcutsTable
     }, {
       key: "g+h",
-      description: "Go to Home",
+      description: "Go to &Home",
       handler: goto("/")
     }, {
-      key: "g+e",
-      description: "Show English posts",
-      handler: goto("/en/")
-    }, {
-      key: "g+v",
-      description: "Show Vietnamese posts",
-      handler: goto("/vi")
-    }, {
       key: "g+a",
-      description: "Go to Archive",
+      description: "Go to &Archive",
       handler: goto("/archive/")
     }, {
       key: "g+m",
-      description: "Go to About",
+      description: "Go to About (&me)",
       handler: goto("/about/")
     }, {
       key: "g+t",
-      description: "View tags",
+      description: "View &tags page",
       handler: goto("/tag/")
+    }, {
+      key: "[",
+      description: "View previous post if existed",
+      handler: () =>  { clickIfExisted("a.prev") }
+    }, {
+      key: "]",
+      description: "View next post if existed",
+      handler: () =>  { clickIfExisted("a.next") }
+    }, {
+      key: "g+q",
+      description: "Raise a Github issue (&question) about current post/page",
+      handler: function() {
+        console.log(window.location.href);
+      }
     }
   ]
 
   shortcuts.forEach(addShortcut);
   keyboardButton.addEventListener('click', showShortcutsTable);
+  // showShortcutsTable();
 })(this);
