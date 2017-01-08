@@ -7,6 +7,7 @@
 (function(globals) {
 
   "use strict";
+
   // banner {{{1 //
   console.log(
     `
@@ -37,27 +38,70 @@ Let's build great apps together!`
   }
 
   /*
-   * Show the list of shotcuts.
+   * Store the HTML table that will be displayed when user press '?'
+   */
+  let htmlTable = "";
+
+  /*
+   * Create a closure to add new keyboard shortcuts later.
+   */
+  let addShortcut = function(s) {
+    htmlTable+=`<tr><th style="text-align:right"><code>${s.key}</code></th><th>${s.description}</th></tr>`;
+    Mousetrap.bind(s.key, s.handler);
+  }
+
+  /*
+   * Show the list of shortcuts.
    */
   let showShortcutsTable = function() {
-    alertify.closeLogOnClick(true)
-      .alert("This is not done yet. Stay tuned.");
+    let completeTable = `<table><tbody>${htmlTable}</tbody></table>`
+    alertify.alert(completeTable);
+  }
+
+  /**
+   * Factory method for goto some url.
+   */
+  let goto = function(where) {
+    return () => {
+      window.location.href = where;
+    }
   }
 
   /*
    * Define the keyboard mapping and descriptions.
    */
-  const shortcuts = {
-    "shift+/": {
-      text: "Show shortcuts help dialog",
+  const shortcuts = [
+    {
+      key: "?",
+      description: "Show this shortcuts help dialog",
       handler: showShortcutsTable
+    }, {
+      key: "g+h",
+      description: "Go to Home",
+      handler: goto("/")
+    }, {
+      key: "g+e",
+      description: "Show English posts",
+      handler: goto("/en/")
+    }, {
+      key: "g+v",
+      description: "Show Vietnamese posts",
+      handler: goto("/vi")
+    }, {
+      key: "g+a",
+      description: "Go to Archive",
+      handler: goto("/archive/")
+    }, {
+      key: "g+m",
+      description: "Go to About",
+      handler: goto("/about/")
+    }, {
+      key: "g+t",
+      description: "View tags",
+      handler: goto("/tag/")
     }
-  }
+  ]
 
-  for (let key in shortcuts) {
-    let handleObject = shortcuts[key];
-    Mousetrap.bind(key, handleObject.handler);
-  }
-
+  shortcuts.forEach(addShortcut);
   keyboardButton.addEventListener('click', showShortcutsTable);
 })(this);
