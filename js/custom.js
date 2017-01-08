@@ -54,7 +54,7 @@ Let's build great apps together!`
    * Show the list of shotcuts.
    */
   let showShortcutsTable = function() {
-    alertify.closeLogOnClick(true).alert("This is not done yet. Stay tune.");
+    alertify.closeLogOnClick(true).alert("This is not done yet. Stay tuned.");
   }
 
   keyboardButton.addEventListener('click', showShortcutsTable);
