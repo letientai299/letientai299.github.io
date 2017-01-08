@@ -1,20 +1,41 @@
-// vim:set et sw=2 ts=2 tw=60:
-document.addEventListener("DOMContentLoaded", function(event) {
-  let noJsBanner = document.getElementById("no-js-banner");
-  if(noJsBanner != null) noJsBanner.remove()
-});
+// vim:set et sw=2 ts=2 tw=80:
+const banner =
+  `
+  ██╗  ██╗██╗██████╗ ███████╗    ███╗   ███╗███████╗██╗
+  ██║  ██║██║██╔══██╗██╔════╝    ████╗ ████║██╔════╝██║
+  ███████║██║██████╔╝█████╗      ██╔████╔██║█████╗  ██║
+  ██╔══██║██║██╔══██╗██╔══╝      ██║╚██╔╝██║██╔══╝  ╚═╝
+  ██║  ██║██║██║  ██║███████╗    ██║ ╚═╝ ██║███████╗██╗
+  ╚═╝  ╚═╝╚═╝╚═╝  ╚═╝╚══════╝    ╚═╝     ╚═╝╚══════╝╚═╝
 
-const banner = `
-██╗  ██╗██╗██████╗ ███████╗    ███╗   ███╗███████╗██╗
-██║  ██║██║██╔══██╗██╔════╝    ████╗ ████║██╔════╝██║
-███████║██║██████╔╝█████╗      ██╔████╔██║█████╗  ██║
-██╔══██║██║██╔══██╗██╔══╝      ██║╚██╔╝██║██╔══╝  ╚═╝
-██║  ██║██║██║  ██║███████╗    ██║ ╚═╝ ██║███████╗██╗
-╚═╝  ╚═╝╚═╝╚═╝  ╚═╝╚══════╝    ╚═╝     ╚═╝╚══════╝╚═╝
-
-Hi! You're awesome. There're a few people who look into
-web console on the sites their visit. I'm looking for you.
+Hi! You're awesome. I'm looking for you. There're a few
+people who look into web console on the sites they visit.
 Let's build great apps together!
 `;
 
 console.log(banner);
+
+
+/*
+ * Build the table of shotcuts
+ */
+
+
+
+/*
+ * Show the list of shotcuts.
+ */
+let showShortcutsTable = function() {
+  alertify.closeLogOnClick(true).error("Not done yet");
+}
+
+/*
+ * Notice user about the shortcuts on this site.
+ */
+let timeout = 1000 * 5;
+alertify
+  .delay(timeout)
+  .closeLogOnClick(true)
+  .log(
+    "This site has shortcuts. Press '?' or click to see."
+  );
