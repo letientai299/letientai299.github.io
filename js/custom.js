@@ -35,7 +35,12 @@ Let's build great apps together!`
     return;
   }
 
+  const nightmode = "nightmode";
   let keyboardButton =  document.getElementById("keyboard-icon");
+
+  if(localStorage.getItem(nightmode) == "true"){
+    document.body.classList.add("dark");
+  }
 
   /*
    * Store the HTML table that will be displayed when user press '?'
@@ -83,19 +88,19 @@ Let's build great apps together!`
       description: "Show this shortcuts help dialog",
       handler: showShortcutsTable
     }, {
-      key: "g+h",
+      key: "g h",
       description: "Go to &Home",
       handler: goto("/")
     }, {
-      key: "g+a",
+      key: "g a",
       description: "Go to &Archive",
       handler: goto("/archive/")
     }, {
-      key: "g+m",
+      key: "g m",
       description: "Go to About (&me)",
       handler: goto("/about/")
     }, {
-      key: "g+t",
+      key: "g t",
       description: "View &tags page",
       handler: goto("/tag/")
     }, {
@@ -106,10 +111,23 @@ Let's build great apps together!`
       key: "]",
       description: "View next post if existed",
       handler: () =>  { clickIfExisted("a.next") }
+    }, {
+      key: "g q",
+      description: "Toggle night mode",
+      handler: () => {
+        let d = document.body;
+        if(d.classList.contains("dark")) {
+          d.classList.remove("dark");
+          localStorage.setItem(nightmode, "false");
+        } else {
+          d.classList.add("dark");
+          localStorage.setItem(nightmode, "true");
+        }
+      }
     }
   ]
 
   shortcuts.forEach(addShortcut);
   keyboardButton.addEventListener('click', showShortcutsTable);
-  // showShortcutsTable();
 })(this);
+

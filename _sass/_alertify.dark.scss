@@ -1,0 +1,9 @@
+body.dark {
+  .alertify .dialog div {
+    background-color: $background-color;
+
+    button {
+      color: $text-color !important;
+    }
+  }
+}

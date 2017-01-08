@@ -1,0 +1,61 @@
+/**
+ * Site header
+ */
+
+body.dark {
+  .site-header {
+    border-top-color: $grey-color-dark;
+    border-bottom-color: $grey-color-light;
+    background: $background-color;
+    box-shadow-color: $grey-color;
+  }
+
+  .site-title {
+    &,
+    &:visited {
+      color: $grey-color-dark;
+    }
+  }
+
+  .site-nav {
+    .page-link {
+      color: $text-color;
+    }
+
+    @include media-query($on-palm) {
+      background-color: $background-color;
+      border-color: $grey-color-light;
+    }
+  }
+
+  /**
+   * Site footer
+   */
+  .site-footer {
+    border-top-color: $grey-color-light;
+  }
+
+  .footer-col-wrapper {
+    color: $grey-color;
+  }
+
+  .post-meta {
+    color: $grey-color;
+  }
+
+  .post-navigation {
+    a {
+      color: $text-color;
+      border-color: $grey-color-light;
+    }
+
+    a:hover {
+      background-color: $grey-color-dark;
+      color: $background-color;
+    }
+
+    a:hover::before {
+      border-right-color: $background-color;
+    }
+  }
+}

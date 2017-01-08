@@ -1,0 +1,51 @@
+body.dark {
+  color: $text-color;
+  background-color: $background-color;
+
+  button, a {
+    color: $brand-color;
+
+    &:visited {
+      color: darken($brand-color, 10%);
+    }
+
+    &:focus, &:active, &:hover {
+      color: $text-color;
+      background: darken($brand-color, 15%);
+      box-shadow-color: $grey-color;
+    }
+  }
+
+  /**
+   * Blockquotes
+   */
+  blockquote {
+    color: $grey-color;
+    border-left-color: $grey-color-light;
+  }
+
+  /**
+   * Code formatting
+   */
+  pre,
+  code {
+    border: 0;
+  }
+
+  .icon {
+    > svg {
+      path {
+        fill: $grey-color;
+      }
+    }
+  }
+
+  table {
+    color: $text-color;
+    background-color: $background-color;
+  }
+
+  tr:nth-child(even) {
+    background-color: lighten($background-color, 15%);
+  }
+}

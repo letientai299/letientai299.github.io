@@ -1,0 +1,25 @@
+body.dark {
+
+  .tags ul li a {
+    background-color: $brand-color;
+    color: $text-color;
+  }
+
+  .tags ul li a::before {
+    border-color: transparent $brand-color transparent transparent;
+  }
+
+
+  .tags ul li a::after {
+    background-color: $text-color;
+  }
+
+  .tags ul li a:hover {
+    background-color: $grey-color-dark;
+    color: $background-color;
+  }
+
+  .tags ul li a:hover::before {
+    border-right-color: $grey-color-dark;
+  }
+}

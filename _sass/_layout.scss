@@ -1,9 +1,7 @@
 /**
  * Site header
  */
-
 .site-header {
-  border-top: 5px solid $grey-color-dark;
   border-bottom: 1px solid $grey-color-light;
   min-height: 56px;
   width: 100%;
@@ -282,11 +280,11 @@ li.post-item {
 
   a:hover {
     background-color: $grey-color-dark;
-    color: white;
+    color: $background-color;
   }
 
   a:hover::before {
-    border-right-color: white;
+    border-right-color: $background-color;
   }
 
   .next {

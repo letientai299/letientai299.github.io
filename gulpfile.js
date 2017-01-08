@@ -3,7 +3,6 @@ const browserSync = require('browser-sync');
 const cp = require('child_process');
 const imagemin = require('gulp-imagemin');
 
-// TODO Do we really need to support window?
 const jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 
 const messages = {
@@ -45,6 +44,7 @@ gulp.task('browser-sync', ['jekyll-build'], function() {
  */
 gulp.task('watch', function() {
   gulp.watch([
+    'css/*.*',
     'js/*.*',
     '_config.yml',
     '*.html',
@@ -53,8 +53,8 @@ gulp.task('watch', function() {
     '_sass/*.scss',
     '_layouts/*.*',
     '_includes/*.*',
-    'en/**/*.*',
-    'vi/**/*.*'
+    'en/**/*.md',
+    'vi/**/*.md'
   ], [
     'jekyll-rebuild'
   ]);
