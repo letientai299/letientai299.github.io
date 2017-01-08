@@ -37,24 +37,26 @@ Let's build great apps together!`
   }
 
   /*
-   * Define the keyboard mapping and descriptions.
-   */
-  const shortcuts = {
-    "shift /": {
-      text: "Show shortcuts help dialog",
-      fn: function() {
-        console.log(this.text);
-      }
-    }
-  }
-
-  // shortcuts.each();
-
-  /*
    * Show the list of shotcuts.
    */
   let showShortcutsTable = function() {
-    alertify.closeLogOnClick(true).alert("This is not done yet. Stay tuned.");
+    alertify.closeLogOnClick(true)
+      .alert("This is not done yet. Stay tuned.");
+  }
+
+  /*
+   * Define the keyboard mapping and descriptions.
+   */
+  const shortcuts = {
+    "shift+/": {
+      text: "Show shortcuts help dialog",
+      handler: showShortcutsTable
+    }
+  }
+
+  for (let key in shortcuts) {
+    let handleObject = shortcuts[key];
+    Mousetrap.bind(key, handleObject.handler);
   }
 
   keyboardButton.addEventListener('click', showShortcutsTable);
