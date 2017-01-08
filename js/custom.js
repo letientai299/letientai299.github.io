@@ -106,12 +106,6 @@ Let's build great apps together!`
       key: "]",
       description: "View next post if existed",
       handler: () =>  { clickIfExisted("a.next") }
-    }, {
-      key: "g+q",
-      description: "Raise a Github issue (&question) about current post/page",
-      handler: function() {
-        console.log(window.location.href);
-      }
     }
   ]
 
