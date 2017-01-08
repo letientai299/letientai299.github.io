@@ -25,8 +25,6 @@ Let's build great apps together!`
   );
   // 1}}} //
 
-  let keyboardButton = document.getElementById("keyboard-icon");
-
   /*
    * Defensive check for lib loading OK, in case that some guys use NoScript.
    */
@@ -36,6 +34,13 @@ Let's build great apps together!`
     })
     return;
   }
+
+  let keyboardButton =  document.createElement('a');
+  keyboardButton.className = "page-link";
+  keyboardButton.title = "Show shortcut keys. Try pressing Shift+/ (this requires Javascript)";
+  keyboardButton.innerHTML = '&#9000;';
+  let navBar = document.querySelector("nav.site-nav > div.trigger");
+  navBar.append(keyboardButton);
 
   /*
    * Store the HTML table that will be displayed when user press '?'
