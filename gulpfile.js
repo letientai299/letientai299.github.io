@@ -15,7 +15,7 @@ const messages = {
  */
 gulp.task('jekyll-build', function(done) {
   browserSync.notify(messages.jekyllBuild);
-  return cp.exec('jekyll build limit_posts --incremental', {
+  return cp.exec('jekyll build --incremental', {
       stdio: 'inherit'
     })
     .on('close', done);

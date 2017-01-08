@@ -3,11 +3,16 @@
   document.addEventListener("DOMContentLoaded", function(event) {
     let noJsBanner = document.getElementById("no-js-banner");
     if(noJsBanner != null) noJsBanner.remove();
+    let keyboardButton = document.getElementById("keyboard-icon");
+    let titleForNoJs = keyboardButton.getAttribute("title");
+    let titleForHasJs = titleForNoJs.replace(/\s*\(.*\)\s*/, "");
+    keyboardButton.setAttribute("title", titleForHasJs);
   });
 </script>
 
 {% comment %} Now load external script via js cdn {% endcomment %}
 <script src="https://cdn.rawgit.com/alertifyjs/alertify.js/v1.0.10/dist/js/alertify.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mousetrap/1.6.0/mousetrap.min.js"></script>
 
 {% comment %} And finally, load our code which depends on the libraries. {% endcomment %}
 <script src="/js/custom.js"></script>
