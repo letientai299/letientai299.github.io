@@ -32,12 +32,8 @@ body.dark {
     border: 0;
   }
 
-  .icon {
-    > svg {
-      path {
-        fill: $grey-color;
-      }
-    }
+  svg path {
+    fill: $text-color;
   }
 
   table {
