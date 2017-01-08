@@ -25,21 +25,37 @@ Let's build great apps together!`
   );
   // 1}}} //
 
+  let keyboardButton =  document.getElementById("keyboard-icon");
+  let lightbulbButton =  document.getElementById("lightbulb-icon")
+
   /*
    * Defensive check for lib loading OK, in case that some guys use NoScript.
    */
-  if ([globals.Mousetrap, globals.alertify].some((lib) => lib == null)) {
-    keyboardButton.addEventListener("click", () => {
-      alert("Please enable JavaScript on 3rd domain to use this feature.");
-    })
+  let libs = ["Mousetrap", "alertify"];
+  let missing = libs.filter((x) =>  globals[x] == null);
+  if (missing.length !== 0) {
+    let showAlertMissingJs = () =>
+      alert("Please enable JavaScript on 3rd domain to use this feature. "
+        + "Following libraries are required: "+ missing.join(","));
+
+    keyboardButton.addEventListener("click", showAlertMissingJs);
+    lightbulbButton.addEventListener("click", showAlertMissingJs);
     return;
   }
 
-  const nightmode = "nightmode";
-  let keyboardButton =  document.getElementById("keyboard-icon");
-
-  if(localStorage.getItem(nightmode) == "true"){
+  const isDark = "darkmode";
+  if(localStorage.getItem(isDark) == "true"){
     document.body.classList.add("dark");
+  }
+  let toggleDarkMode = function() {
+    let d = document.body;
+    if(d.classList.contains("dark")) {
+      d.classList.remove("dark");
+      localStorage.setItem(isDark, "false");
+    } else {
+      d.classList.add("dark");
+      localStorage.setItem(isDark, "true");
+    }
   }
 
   /*
@@ -114,20 +130,13 @@ Let's build great apps together!`
     }, {
       key: "g q",
       description: "Toggle night mode",
-      handler: () => {
-        let d = document.body;
-        if(d.classList.contains("dark")) {
-          d.classList.remove("dark");
-          localStorage.setItem(nightmode, "false");
-        } else {
-          d.classList.add("dark");
-          localStorage.setItem(nightmode, "true");
-        }
-      }
+      handler:    toggleDarkMode
     }
   ]
 
   shortcuts.forEach(addShortcut);
+
   keyboardButton.addEventListener('click', showShortcutsTable);
+  lightbulbButton.addEventListener("click", toggleDarkMode);
 })(this);
 

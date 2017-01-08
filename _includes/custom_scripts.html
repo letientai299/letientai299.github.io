@@ -1,12 +1,20 @@
 {% comment %} Remove the no js banner first {% endcomment %}
 <script>
   document.addEventListener("DOMContentLoaded", function(event) {
+    "use strict";
+
     let noJsBanner = document.getElementById("no-js-banner");
     if(noJsBanner != null) noJsBanner.remove();
-    let keyboardButton = document.getElementById("keyboard-icon");
-    let titleForNoJs = keyboardButton.getAttribute("title");
-    let titleForHasJs = titleForNoJs.replace(/\s*\(.*\)\s*/, "");
-    keyboardButton.setAttribute("title", titleForHasJs);
+
+    let removeTextWithinParens = (s) => s.replace(/\s*\(.*\)\s*/, "");
+    let removeJsNotice = (id) =>  {
+      let e = document.getElementById(id);
+      let t = e.getAttribute("title");
+      e.setAttribute("title", removeTextWithinParens(t));
+    };
+
+    removeJsNotice("keyboard-icon");
+    removeJsNotice("lightbulb-icon");
   });
 </script>
 
@@ -15,5 +23,5 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mousetrap/1.6.0/mousetrap.min.js"></script>
 
 {% comment %} And finally, load our code which depends on the libraries. {% endcomment %}
-<script src="/js/custom.js"></script>
+<script src="/js/custom-shortcuts.js"></script>
 
