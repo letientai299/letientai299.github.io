@@ -13,7 +13,7 @@ const banner = `
 ╚═╝  ╚═╝╚═╝╚═╝  ╚═╝╚══════╝    ╚═╝     ╚═╝╚══════╝╚═╝
 
 Hi! You're awesome. There're a few people who look into
-web console on the sites their visit. I'm looking you.
+web console on the sites their visit. I'm looking for you.
 Let's build great apps together!
 `;
 
