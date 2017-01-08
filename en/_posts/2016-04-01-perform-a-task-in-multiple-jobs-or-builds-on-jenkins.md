@@ -2,7 +2,7 @@
 layout: "post"
 title: "Perform a task in multiple jobs or builds on Jenkins"
 date: "2016-04-01 16:13"
-modified_at: "2017 Jan 08"
+modified_at: "2017 Jan 09"
 tags: jenkins tip
 ---
 
@@ -40,4 +40,4 @@ Jenkins.instance.getItemByFullName("JobName")
   what will be affected by your command, then replace it with the actual
   command.
 
-[^jenkins_theme]: If you wonder, we have customized our Jenkin by using [Simple Theme plugin](https://wiki.jenkins-ci.org/display/JENKINS/Simple+Theme+Plugin) with the [Material theme](afonsof.com/jenkins-material-theme/).
+[^jenkins_theme]: If you wonder, we have customized our Jenkin by using [Simple Theme plugin](https://wiki.jenkins-ci.org/display/JENKINS/Simple+Theme+Plugin) with the [Material theme](http://afonsof.com/jenkins-material-theme/).

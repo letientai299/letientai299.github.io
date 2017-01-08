@@ -43,6 +43,9 @@ Let's build great apps together!`
     return;
   }
 
+  /*
+   * Restore state
+   */
   const isDark = "darkmode";
   if(localStorage.getItem(isDark) == "true"){
     document.body.classList.add("dark");
