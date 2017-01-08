@@ -1,20 +1,29 @@
 div.container {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
+
 
 div.container > div.right > span {
-    vertical-align: center;
-}
+  vertical-align: center;
 
-div.container > div.right > span > a {
+  > a {
     clear: right;
     display: inline-block;
-    margin-left: 10px;
-}
+    color: $text-color;
+    margin-left: 4px;
 
-div.container > div.right > span > a > svg {
-    height: 24px;
-    width: 24px;
-    vertical-align: bottom;
+    > svg {
+      height: 24px;
+      width: 24px;
+      vertical-align: bottom;
+    }
+
+    @include media-query($on-palm) {
+      > span {
+        display: none;
+      }
+    }
+  }
+
 }

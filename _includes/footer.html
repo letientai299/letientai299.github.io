@@ -9,6 +9,7 @@
           <span>
             <a href="{{ icon.url }}">
               {% include {{ icon.class | prepend: "icon-" | append: ".svg" }} %}
+              <span>{{ icon.title }}</span>
             </a>
           </span>
         {% endfor %}
