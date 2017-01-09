@@ -1,4 +1,4 @@
-// vim:set et sw=2 ts=2 tw=80:
+// vim:set et sw=2 ts=2 tw=80 fen:
 /*
  * THIS FILE IS LEAVE UNCOMPRESSED FOR YOUR REVIEWING, SIR :).
  *

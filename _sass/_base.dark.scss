@@ -3,18 +3,19 @@ body.dark {
   background-color: $background-color;
 
   button, a {
-    color: $brand-color;
-
-    &:visited {
-      color: darken($brand-color, 10%);
-    }
+    color: lighten($brand-color, 15%);
 
     &:focus, &:active, &:hover {
       color: $text-color;
-      background: darken($brand-color, 15%);
+      background: darken($brand-color, 5%);
       box-shadow-color: $grey-color;
     }
   }
+
+  a:visited {
+    color: lighten($brand-color, 15%);
+  }
+
 
   /**
    * Blockquotes
