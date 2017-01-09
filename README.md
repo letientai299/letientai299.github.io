@@ -11,26 +11,7 @@ I have learn some cool tips and ideas about Jekyll/Liquid by reading those posts
 TODO
 ----
 
-- [ ] Add meta for search engine.
-- [ ] Add search functions: search using tags, using categories, by keywords.
-- [ ] Add social sharing buttons.
-- [x] Add link to social accounts.
-- [ ] Try to create a better theme.
-- [x] Manage multiple languages post.
-- [ ] Take notes about how to create this site
-- [ ] Write post! Damn it. Too lazy.
-- [ ] Create left side bar for grouping posts
-- [ ] ...
+This list TODO for setup gulp with jekylls. For TODO on site features, see the
+issues.
 
-
-Posts ideas
------------
-
-- [ ] Tutorial about create atom custom command.
-- [ ] X macros trick.
-- [ ] How to change Apache2 home page?
-- [ ] Use ProxyPass to redirect Apache2 page to other web app in Ubuntu server.
-- [ ] Share common settings between android gradle modules.
-- [ ] Setup Jenkins to deploy after build success.
-- [ ] Customize your maven site: site.css, add code highlight, change skin...
-- [ ] Using scala to check for java code.
+- [ ] Git should not ask me anything about dest folder.

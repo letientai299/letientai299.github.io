@@ -25,12 +25,29 @@ const underscorePrefixes = [
   "layouts"
 ];
 
+gulp.task('sass', () => {
+  return gulp.src(SRC + '/sass/**/*.scss')
+    .pipe(sass({outputStyle: 'compressed'})
+      .on('error', sass.logError)
+    )
+    .pipe(gulp.dest(DEST + '/css'));
+});
 
-gulp.task('sync', () => {
+gulp.task('min', () => {
   gulp.src([
-    '**/*.md',
-    '**/*.html',
-    '**/*.xml'
+    SRC + '/images/**'
+  ], {base: SRC})
+    .pipe(debug())
+    .pipe(imagemin())
+    .pipe(gulp.dest(DEST))
+});
+
+
+gulp.task('sync', ['sass', 'min'], () => {
+  gulp.src([
+    SRC + '/**/*.md',
+    SRC + '/**/*.html',
+    SRC + '/**/*.xml'
   ], {base: SRC})
     .pipe(rename((path) => {
       underscorePrefixes.forEach((s) => {
@@ -41,9 +58,17 @@ gulp.task('sync', () => {
 });
 
 gulp.task('watch', () => {
-  gulp.watch(SCR + "/**/*.md").on('change', (e) => {
-    // TODO convert and
-  });
+  gulp.watch("**/*.md", {base: SRC})
+    .on('change', (e) => {
+      gulp.src(e.path)
+        .pipe(
+          rename((path) => {
+            underscorePrefixes.forEach((s) => {
+              path.dirname = path.dirname.replace(s, '_' + s);
+            });
+          }))
+        .pipe(gulp.dest(DEST));
+    });
 });
 
 /*
@@ -52,7 +77,7 @@ gulp.task('watch', () => {
 gulp.task('jekyll', () => {
   const jekyll = cp.spawn('jekyll', [
     'build',
-    '--watch',
+    // '--watch',
     '--incremental',
     '--drafts'
   ]);
@@ -67,19 +92,12 @@ gulp.task('jekyll', () => {
   jekyll.stderr.on('data', jekyllLogger);
 });
 
-/*
- * Minify assets
- */
-gulp.task('min', () => {
-  gulp.src('./src/images/**/*')
-    .pipe(imagemin())
-    .pipe(gulp.dest('images'))
-});
+gulp.task('build', ['sync', 'jekyll']);
 
 /*
  * Start browserSync server and watch for changes in dest folder.
  */
-gulp.task('serve', () => {
+gulp.task('serve', ['build'], () => {
   const siteRoot = '_site';
   browserSync({
     files: [siteRoot + '/**'],
@@ -89,8 +107,7 @@ gulp.task('serve', () => {
       baseDir: siteRoot
     }
   });
-
 });
 
-gulp.task('default', ['sync']);
+gulp.task('default', ['clean', 'build']);
 
