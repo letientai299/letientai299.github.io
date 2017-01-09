@@ -69,7 +69,7 @@ gulp.task('default', ['browser-sync', 'watch']);
 
 
 gulp.task('min', function() {
-  gulp.src('./images_src/**/*')
+  gulp.src('./src/images/**/*')
     .pipe(imagemin())
     .pipe(gulp.dest('images'))
 });

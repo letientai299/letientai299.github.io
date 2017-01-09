@@ -58,3 +58,10 @@ social:
     - https://www.linkedin.com/in/letientai299
     - https://github.com/letientai299
     - https://hackerrank.com/letientai299
+
+exclude:
+  - package.json
+  - node_modules
+  - gulpfiles.js
+  - src
+
