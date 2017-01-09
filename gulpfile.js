@@ -13,6 +13,9 @@ const cp = require('child_process');
 const SRC = 'src';
 const DEST = 'dest';
 
+gulp.task('clean', () => {
+  require('del')(DEST + "/*");
+});
 
 const sassFiles = [SRC + '/**/*.scss'];
 let watchSass = () => {
@@ -25,10 +28,6 @@ let watchSass = () => {
 
 gulp.task('sync', function() {
   watchSass();
-
-  // gulp.src(SRC + "/**/*.md", { base: SRC })
-    // .pipe(watch(SRC, { base: SRC }))
-    // .pipe(gulp.dest(DEST));
 
   gulp.watch(SRC + "/**/*.md").on('change', function(event) {
     let fileSrc = event.path;
@@ -85,8 +84,5 @@ gulp.task('serve', function() {
 
 });
 
-/**
- * Default task, running just `gulp` will compile the sass,
- * compile the jekyll site, launch BrowserSync & watch files.
- */
 gulp.task('default', ['sync']);
+
