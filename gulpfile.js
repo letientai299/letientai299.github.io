@@ -6,6 +6,7 @@ const sass = require('gulp-sass');
 const util = require('gulp-util');
 const watch = require('gulp-watch');
 const imagemin = require('gulp-imagemin');
+const rename = require('gulp-rename');
 
 const browserSync = require('browser-sync');
 const cp = require('child_process');
@@ -17,31 +18,38 @@ gulp.task('clean', () => {
   require('del')(DEST + "/*");
 });
 
-const sassFiles = [SRC + '/**/*.scss'];
-let watchSass = () => {
-  gulp.watch(sassFiles).on('change', () => {
-    gulp.src(sassFiles)
-      .pipe(sass().on('error', sass.logError))
-      .pipe(gulp.dest(DEST + '/css'));
+// I don't like the underscore naming conventions in jekyll, hard to type.
+const underscorePrefixes = [
+  "posts",
+  "includes",
+  "layouts"
+];
+
+
+gulp.task('sync', () => {
+  gulp.src([
+    '**/*.md',
+    '**/*.html',
+    '**/*.xml'
+  ], {base: SRC})
+    .pipe(rename((path) => {
+      underscorePrefixes.forEach((s) => {
+        path.dirname= path.dirname.replace(s, '_' + s);
+      });
+    }))
+    .pipe(gulp.dest(DEST));
+});
+
+gulp.task('watch', () => {
+  gulp.watch(SCR + "/**/*.md").on('change', (e) => {
+    // TODO convert and
   });
-};
-
-gulp.task('sync', function() {
-  watchSass();
-
-  gulp.watch(SRC + "/**/*.md").on('change', function(event) {
-    let fileSrc = event.path;
-    // I don't like the underscore naming conventions in jekyll
-    let fileDest = fileSrc.replace(SRC + "/", DEST+"/_");
-    gulp.src(fileSrc).
-      pipe(gulp.dest(fileDest));
-  })
 });
 
 /*
  * Build the site and log all jekyll output to console.
  */
-gulp.task('jekyll', function() {
+gulp.task('jekyll', () => {
   const jekyll = cp.spawn('jekyll', [
     'build',
     '--watch',
@@ -62,7 +70,7 @@ gulp.task('jekyll', function() {
 /*
  * Minify assets
  */
-gulp.task('min', function() {
+gulp.task('min', () => {
   gulp.src('./src/images/**/*')
     .pipe(imagemin())
     .pipe(gulp.dest('images'))
@@ -71,7 +79,7 @@ gulp.task('min', function() {
 /*
  * Start browserSync server and watch for changes in dest folder.
  */
-gulp.task('serve', function() {
+gulp.task('serve', () => {
   const siteRoot = '_site';
   browserSync({
     files: [siteRoot + '/**'],
