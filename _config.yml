@@ -4,6 +4,12 @@ description: "Coding monkey"
 baseurl: ""
 url: "https://letientai299.github.io"
 
+# Config source dir for jekyll to read
+source: dest
+
+# To make sure that site looks the same both local and github
+safe: true
+
 num-recent-post: 10
 num-words-post-title-truncate: 4
 

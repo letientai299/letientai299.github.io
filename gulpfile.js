@@ -1,75 +1,92 @@
+'use strict';
+
 const gulp = require('gulp');
-const browserSync = require('browser-sync');
-const cp = require('child_process');
+const debug = require('gulp-debug');
+const sass = require('gulp-sass');
+const util = require('gulp-util');
+const watch = require('gulp-watch');
 const imagemin = require('gulp-imagemin');
 
-const jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
+const browserSync = require('browser-sync');
+const cp = require('child_process');
 
-const messages = {
-  jekyllBuild: 'Refreshing'
+const SRC = 'src';
+const DEST = 'dest';
+
+
+const sassFiles = [SRC + '/**/*.scss'];
+let watchSass = () => {
+  gulp.watch(sassFiles).on('change', () => {
+    gulp.src(sassFiles)
+      .pipe(sass().on('error', sass.logError))
+      .pipe(gulp.dest(DEST + '/css'));
+  });
 };
 
-/**
- * Build the Jekyll Site
- */
-gulp.task('jekyll-build', function(done) {
-  browserSync.notify(messages.jekyllBuild);
-  return cp.exec('jekyll build --incremental', {
-      stdio: 'inherit'
-    })
-    .on('close', done);
+gulp.task('sync', function() {
+  watchSass();
+
+  // gulp.src(SRC + "/**/*.md", { base: SRC })
+    // .pipe(watch(SRC, { base: SRC }))
+    // .pipe(gulp.dest(DEST));
+
+  gulp.watch(SRC + "/**/*.md").on('change', function(event) {
+    let fileSrc = event.path;
+    // I don't like the underscore naming conventions in jekyll
+    let fileDest = fileSrc.replace(SRC + "/", DEST+"/_");
+    gulp.src(fileSrc).
+      pipe(gulp.dest(fileDest));
+  })
 });
 
-/**
- * Rebuild Jekyll & do page reload
+/*
+ * Build the site and log all jekyll output to console.
  */
-gulp.task('jekyll-rebuild', ['jekyll-build'], function() {
-  browserSync.reload();
+gulp.task('jekyll', function() {
+  const jekyll = cp.spawn('jekyll', [
+    'build',
+    '--watch',
+    '--incremental',
+    '--drafts'
+  ]);
+
+  const jekyllLogger = (buffer) => {
+    buffer.toString()
+      .split(/\n/)
+      .forEach((message) => util.log('Jekyll: ' + message));
+  };
+
+  jekyll.stdout.on('data', jekyllLogger);
+  jekyll.stderr.on('data', jekyllLogger);
 });
 
-/**
- * Wait for jekyll-build, then launch the Server
+/*
+ * Minify assets
  */
-gulp.task('browser-sync', ['jekyll-build'], function() {
+gulp.task('min', function() {
+  gulp.src('./src/images/**/*')
+    .pipe(imagemin())
+    .pipe(gulp.dest('images'))
+});
+
+/*
+ * Start browserSync server and watch for changes in dest folder.
+ */
+gulp.task('serve', function() {
+  const siteRoot = '_site';
   browserSync({
+    files: [siteRoot + '/**'],
+    browser: 'google-chrome',
+    https: true,
     server: {
-      baseDir: '_site'
+      baseDir: siteRoot
     }
   });
-});
 
-/**
- * Watch scss files for changes & recompile
- * Watch html/md files, run jekyll & reload BrowserSync
- */
-gulp.task('watch', function() {
-  gulp.watch([
-    'css/*.*',
-    'js/*.*',
-    '_config.yml',
-    '*.html',
-    '*.md',
-    'pages/*',
-    '_sass/*.scss',
-    '_layouts/*.*',
-    '_includes/*.*',
-    'en/**/*.md',
-    'vi/**/*.md'
-  ], [
-    'jekyll-rebuild'
-  ]);
 });
 
 /**
  * Default task, running just `gulp` will compile the sass,
  * compile the jekyll site, launch BrowserSync & watch files.
  */
-gulp.task('default', ['browser-sync', 'watch']);
-
-
-
-gulp.task('min', function() {
-  gulp.src('./src/images/**/*')
-    .pipe(imagemin())
-    .pipe(gulp.dest('images'))
-});
+gulp.task('default', ['sync']);
