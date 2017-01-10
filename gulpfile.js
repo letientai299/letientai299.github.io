@@ -45,7 +45,6 @@ gulp.task('browser-sync', ['jekyll-build'], function() {
 gulp.task('watch', function() {
   gulp.watch([
     'css/*.*',
-    'js/*.*',
     '_config.yml',
     '*.html',
     '*.md',
@@ -66,10 +65,8 @@ gulp.task('watch', function() {
  */
 gulp.task('default', ['browser-sync', 'watch']);
 
-
-
 gulp.task('min', function() {
-  gulp.src('./images_src/**/*')
+  gulp.src('src/images/**/*')
     .pipe(imagemin())
-    .pipe(gulp.dest('images'))
+    .pipe(gulp.dest('./images'))
 });
