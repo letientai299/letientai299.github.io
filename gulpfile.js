@@ -8,15 +8,11 @@ const header = require('gulp-header');
 
 const jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 
-const messages = {
-  jekyllBuild: 'Refreshing'
-};
-
 /**
  * Build the Jekyll Site
  */
 gulp.task('jekyll-build', function(done) {
-  browserSync.notify(messages.jekyllBuild);
+  browserSync.notify("Refreshing");
   return cp.exec('jekyll build --incremental', {
     stdio: 'inherit'
   })
@@ -27,7 +23,7 @@ gulp.task('jekyll-build', function(done) {
  * Rebuild Jekyll & do page reload
  */
 gulp.task('jekyll-rebuild', ['jekyll-build'], function() {
-  browserSync.reload();
+  browserSync.reload()
 });
 
 /**
