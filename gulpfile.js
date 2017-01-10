@@ -2,7 +2,8 @@ const gulp = require('gulp');
 const browserSync = require('browser-sync');
 const cp = require('child_process');
 const imagemin = require('gulp-imagemin');
-const minify = require('gulp-minify');
+const babel = require('gulp-babel');
+const extname = require('gulp-extname');
 
 const jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 
@@ -16,8 +17,8 @@ const messages = {
 gulp.task('jekyll-build', function(done) {
   browserSync.notify(messages.jekyllBuild);
   return cp.exec('jekyll build --incremental', {
-      stdio: 'inherit'
-    })
+    stdio: 'inherit'
+  })
     .on('close', done);
 });
 
@@ -45,6 +46,7 @@ gulp.task('browser-sync', ['jekyll-build'], function() {
  */
 gulp.task('watch', function() {
   gulp.watch([
+    'js/*.*',
     'css/*.*',
     '_config.yml',
     '*.html',
@@ -70,4 +72,12 @@ gulp.task('min', function() {
   gulp.src('src/images/**/*')
     .pipe(imagemin())
     .pipe(gulp.dest('./images'))
+
+  gulp.src('js/*.js')
+    .pipe(babel({
+      presets: ['babili'],
+      comments: false
+    }))
+    .pipe(extname(".min.js"))
+    .pipe(gulp.dest('js/min/'));
 });
