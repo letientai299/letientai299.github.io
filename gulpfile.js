@@ -4,6 +4,7 @@ const cp = require('child_process');
 const imagemin = require('gulp-imagemin');
 const babel = require('gulp-babel');
 const extname = require('gulp-extname');
+const header = require('gulp-header');
 
 const jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 
@@ -69,7 +70,7 @@ gulp.task('watch', function() {
 gulp.task('default', ['browser-sync', 'watch']);
 
 gulp.task('min', function() {
-  gulp.src('src/images/**/*')
+  gulp.src('assets/images/**/*')
     .pipe(imagemin())
     .pipe(gulp.dest('./images'))
 
@@ -79,5 +80,6 @@ gulp.task('min', function() {
       comments: false
     }))
     .pipe(extname(".min.js"))
-    .pipe(gulp.dest('js/min/'));
+    .pipe(header('/*Hello, wanna review my code? get it here: ...*/'))
+    .pipe(gulp.dest('dist/'));
 });
