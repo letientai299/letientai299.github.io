@@ -2,6 +2,7 @@ const gulp = require('gulp');
 const browserSync = require('browser-sync');
 const cp = require('child_process');
 const imagemin = require('gulp-imagemin');
+const minify = require('gulp-minify');
 
 const jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 

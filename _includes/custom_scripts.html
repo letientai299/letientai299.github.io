@@ -29,4 +29,9 @@
   {% endcapture %}
   {{ include_to_scssify | scssify }}
 </style>
-<script src="/js/custom-shortcuts.js"></script>
+
+{% if jekyll.environment == "development" %}
+  <script src="/js/custom-shortcuts.js"></script>
+{% else %}
+  <script src="https://cdn.rawgit.com/letientai299/letientai299.github.io/d9e340f2/js/custom-shortcuts.js"></script>
+{% endif %}
