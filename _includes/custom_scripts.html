@@ -23,13 +23,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mousetrap/1.6.0/mousetrap.min.js"></script>
 
 {% comment %} And finally, load our code which depends on the libraries. {% endcomment %}
-<style type="text/css">
-  {% capture include_to_scssify %}
-    {% include main.dark.scss %}
-  {% endcapture %}
-  {{ include_to_scssify | scssify }}
-</style>
-
 {% if jekyll.environment == "development" %}
   <script src="/js/custom-shortcuts.js"></script>
 {% else %}
