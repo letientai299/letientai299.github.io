@@ -76,6 +76,6 @@ gulp.task('min', function() {
       comments: false
     }))
     .pipe(extname(".min.js"))
-    .pipe(header('/*Hello, wanna review my code? get it here: ...*/'))
+    .pipe(header('// Hi reviewer, please see original source here:\n// https://git.io/vMEw2\n'))
     .pipe(gulp.dest('dist/'));
 });

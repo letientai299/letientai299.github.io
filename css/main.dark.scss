@@ -1,0 +1,30 @@
+---
+---
+@charset "utf-8";
+
+// dark mode custom variables
+// base on this site: https://nildeala.fr/
+$text-color:       #fdfdfd;
+$background-color: #333;
+$brand-color:      #ff4081;
+
+$grey-color:       #90A4AE;
+$grey-color-light: darken($grey-color, 25%);
+$grey-color-dark:  lighten($grey-color, 40%);
+
+$on-palm:          450px;
+$on-laptop:        600px;
+
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+@import
+"base.dark",
+"layout.dark",
+"footer.dark",
+"tagcloud.dark",
+"monokai.dark",
+"alertify.dark";
