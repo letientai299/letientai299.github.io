@@ -72,7 +72,7 @@ gulp.task('min', function() {
 
   gulp.src('js/*.js')
     .pipe(babel({
-      presets: ['es2015', 'babili'],
+      presets: ['babili'],
       comments: false
     }))
     .pipe(extname(".min.js"))
