@@ -1,8 +1,8 @@
-title: Tai LT
-author: "Tai Le Tien"
-description: "Coding monkey"
+title: Tai Le
+author: "Tai Le"
+description: "Wannabe Hacker"
 baseurl: ""
-url: "https://letientai299.github.io"
+url: "https://letientai.io"
 
 num-recent-post: 10
 num-words-post-title-truncate: 4
@@ -21,12 +21,6 @@ social-icons:
   - title: GitHub
     url: https://github.com/letientai299
     class: github
-  - title: HackerRank
-    url: https://hackerrank.com/letientai299
-    class: hackerrank
-  - title: Twitter
-    url: https://twitter.com/letientai299
-    class: twitter
   - title: LinkedIn
     url: https://www.linkedin.com/in/letientai299
     class: linkedin
@@ -47,14 +41,8 @@ gems:
   - jekyll-seo-tag
   - jekyll-sitemap
 
-twitter:
-  username: letientai299
-
 social:
   name: Tai Le Tien
   links:
-    - https://twitter.com/letientai299
-    - https://www.facebook.com/letientai299
     - https://www.linkedin.com/in/letientai299
     - https://github.com/letientai299
-    - https://hackerrank.com/letientai299
