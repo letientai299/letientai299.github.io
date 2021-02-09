@@ -1,9 +1,4 @@
 // vim:set et sw=2 ts=2 tw=80:
-/*
- * THIS FILE IS LEAVE UNCOMPRESSED FOR YOUR REVIEWING, SIR :).
- *
- * Just kidding, currently I have no idea how to minify js on Github Pages.
- */
 (function(globals) {
   "use strict";
 
