@@ -1,21 +1,21 @@
 {% comment %} Remove the no js banner first {% endcomment %}
 <script>
   document.addEventListener("DOMContentLoaded", function(event) {
-    "use strict";
+      "use strict";
 
-    let noJsBanner = document.getElementById("no-js-banner");
-    if(noJsBanner != null) noJsBanner.remove();
+      let noJsBanner = document.getElementById("no-js-banner");
+      if(noJsBanner != null) noJsBanner.remove();
 
-    let removeTextWithinParens = (s) => s.replace(/\s*\(.*\)\s*/, "");
-    let removeJsNotice = (id) =>  {
-      let e = document.getElementById(id);
-      let t = e.getAttribute("title");
-      e.setAttribute("title", removeTextWithinParens(t));
-    };
+      let removeTextWithinParens = (s) => s.replace(/\s*\(.*\)\s*/, "");
+      let removeJsNotice = (id) =>  {
+          let e = document.getElementById(id);
+          let t = e.getAttribute("title");
+          e.setAttribute("title", removeTextWithinParens(t));
+        };
 
-    removeJsNotice("keyboard-icon");
-    removeJsNotice("lightbulb-icon");
-  });
+      removeJsNotice("keyboard-icon");
+      removeJsNotice("lightbulb-icon");
+    });
 </script>
 
 {% comment %} Now load external script via js cdn {% endcomment %}
@@ -24,12 +24,11 @@
 
 {% comment %} And finally, load our code which depends on the libraries. {% endcomment %}
 {% if jekyll.environment == "development" %}
-  <script src="/js/custom-shortcuts.js"></script>
+<script src="/js/custom-shortcuts.js"></script>
 {% else %}
-  <script
-  src="https://cdn.rawgit.com/letientai299/letientai299.github.io/8ede1b4/dist/custom-shortcuts.min.js"></script>
+<script
+    src="https://cdn.rawgit.com/letientai299/letientai299.github.io/8ede1b4/dist/custom-shortcuts.min.js"></script>
 {% endif %}
 
-<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
 <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="/css/main.dark.css">
